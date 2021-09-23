@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1><title>user: {{user.username  }} </title></h1>
+    <hr>
+    {% for comment in comments %}
+        <p>
+           {% include '_comment.html' %}
+        </p>
+    {% endfor %}
+{% endblock %}

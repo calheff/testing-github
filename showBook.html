@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <tr">
+        <th></th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Comments</th>
+        </tr>
+        {% for book in books %}
+        <tr">
+            <td style="text-align:left">
+                <img src="{{ book.cover }}" width="60px"> {{ book.numPages}}
+            </td>
+            <td>
+                {{ book.title }}
+            </td>
+            <td>
+                {{ book.author }}
+            </td>
+            <td>
+                <p>{{book.description}}</p>
+                <p>{{book.numPages}} pages</p>
+            </td>
+            <td>Add comment [not implemented yet]</td>
+            </tr>
+            {% endfor %}
+</table>
+
+{% endblock %}
